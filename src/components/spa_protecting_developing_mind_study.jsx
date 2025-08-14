@@ -506,7 +506,7 @@ export default function MindProtectionApp() {
 
     <article className="bg-white p-4 rounded-2xl shadow-sm">
     <h4 className="font-semibold">Sources & méthodologie</h4>
-    <p className="mt-2 text-sm text-gray-700">Données : Global Mind Project (MHQ) — analyses rétrospectives sur >100k individus 18–24 ans. Méthode : régression et analyses médiatrices (Thiagarajan et al., 2025). Références clés (extraits) : Common Sense Media, Twenge et al. 2018, Orben et al. 2022, Costello et al. 2023.</p>
+    <p className="mt-2 text-sm text-gray-700">Données : Global Mind Project (MHQ) — analyses rétrospectives sur &gt;100k individus 18–24 ans. Méthode : régression et analyses médiatrices (Thiagarajan et al., 2025). Références clés (extraits) : Common Sense Media, Twenge et al. 2018, Orben et al. 2022, Costello et al. 2023.</p>
     <a className="inline-block mt-3 text-xs text-indigo-600 underline" href="https://doi.org/10.1080/19452829.2025.2518313" target="_blank" rel="noreferrer">Lire l'article original (DOI)</a>
     </article>
 

@@ -1,10 +1,12 @@
 import React from 'react';
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { motion } from "framer-motion";
 
-export default function App() {
+const Card = ({ className, children }) => <div className={`bg-white rounded-lg shadow-md ${className}`}>{children}</div>;
+const CardContent = ({ className, children }) => <div className={`p-6 ${className}`}>{children}</div>;
+const Button = ({ className, children, ...props }) => <button className={`px-4 py-2 rounded-md text-white bg-blue-600 hover:bg-blue-700 ${className}`} {...props}>{children}</button>;
+
+export default function DigitalMindPolicy() {
   // Données MHQ par âge d'acquisition smartphone
   const mhqData = [
     { age: '5 ans', score: 1 },
@@ -35,7 +37,7 @@ export default function App() {
       </motion.h1>
 
       <Card className="shadow-lg">
-        <CardContent className="p-6 space-y-4">
+        <CardContent className="space-y-4">
           <p>
             Cette application interactive présente les résultats de l’étude <em>Protecting the Developing Mind in a Digital Age</em> (Thiagarajan et al., 2025), analysant l’impact de l’âge d’acquisition du premier smartphone sur la santé mentale des jeunes adultes.
           </p>
@@ -47,7 +49,7 @@ export default function App() {
 
       {/* Graphique MHQ */}
       <Card>
-        <CardContent className="p-6">
+        <CardContent>
           <h2 className="text-xl font-semibold mb-4">Score MHQ moyen selon l’âge d’acquisition</h2>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={mhqData}>
@@ -63,7 +65,7 @@ export default function App() {
 
       {/* Graphique médiateurs */}
       <Card>
-        <CardContent className="p-6">
+        <CardContent>
           <h2 className="text-xl font-semibold mb-4">Facteurs médiateurs de l’impact</h2>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
@@ -86,7 +88,7 @@ export default function App() {
 
       {/* Recommandations */}
       <Card>
-        <CardContent className="p-6 space-y-3">
+        <CardContent className="space-y-3">
           <h2 className="text-xl font-semibold">Recommandations politiques clés</h2>
           <ul className="list-disc list-inside space-y-1">
             <li>Éducation obligatoire à la littératie numérique et à la santé mentale avant accès aux réseaux sociaux.</li>
